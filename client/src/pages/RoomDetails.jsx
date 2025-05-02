@@ -14,12 +14,18 @@ function RoomDetails() {
   console.log(room);
   console.log(mainImage);
   return (
-    <div className="flex flex-col-reverse lg:flex-row pt-28">
-      <div>
-        <h1>Room Details</h1>
-        <img src={mainImage} alt="" />
+    room && (
+      <div className="py-28 md:py-35 px-4 md:px-16 lg:px-24 xl:px-32">
+        {/* Room Details */}
+        <div>
+          <h1>
+            {room.hotel.name} <span>({room.roomType})</span>
+          </h1>
+          <p>20% OFF</p>
+          <img src={mainImage} alt="" />
+        </div>
       </div>
-    </div>
+    )
   );
 }
 
