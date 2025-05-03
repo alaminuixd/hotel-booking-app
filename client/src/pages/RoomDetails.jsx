@@ -47,17 +47,23 @@ function RoomDetails() {
             />
           </div>
           <div className="grid grid-cols-2 gap-4 lg:w-1/2 w-full">
-            {room?.images.length > 1 &&
+            {room?.images?.length > 1 &&
               room.images.map((image, index) => (
-                <img
-                  onClick={() => setMainImage(image)}
-                  key={index}
-                  src={image}
-                  alt="Room Image"
-                  className={`w-full rounded-xl shadow-md object-cover cursor-pointer ${
-                    mainImage === image && "outline-3 outline-orange-500"
-                  }`}
-                />
+                <div className="relative w-full">
+                  <img
+                    onClick={() => setMainImage(image)}
+                    key={index}
+                    src={image}
+                    alt="Room Image"
+                    className={`w-full h-full rounded-xl shadow-md object-cover cursor-pointer ${
+                      mainImage === image &&
+                      "outline-1 outline-blue-500 grayscale"
+                    }`}
+                  />
+                  {mainImage === image && (
+                    <div className="absolute inset-0 bg-blue-600/50 rounded-xl" />
+                  )}
+                </div>
               ))}
           </div>
         </div>

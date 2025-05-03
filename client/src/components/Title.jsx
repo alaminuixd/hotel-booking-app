@@ -7,7 +7,7 @@ const Title = ({ title, subTitle, align, font }) => {
         align === "left" && "md:items-start md:text-left"
       } gap-2`}
     >
-      <h1 className={`text-4xl md:text-[40px] ${font} font-playfair`}>
+      <h1 className={`text-4xl md:text-[40px] ${font || "font-playfair"}`}>
         {title}
       </h1>
       <p>{subTitle}</p>

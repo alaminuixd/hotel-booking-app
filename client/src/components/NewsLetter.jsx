@@ -8,6 +8,7 @@ const NewsLetter = () => {
       <Title
         title="Stay Inspaired"
         subTitle="Subscribe to our newsletter and be the first to receive exclusive offers, travel tips, and updates on our luxurious properties."
+        align={"left"}
       />
       <div className="flex flex-col md:flex-row items-center justify-center gap-4 mt-6">
         <input

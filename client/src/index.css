@@ -16,6 +16,9 @@
 .font-inter {
   font-family: "Inter", serif !important;
 }
+.font-impect {
+  font-family: "Impact", serif !important;
+}
 input[type="date"]::-webkit-calendar-picker-indicator {
   filter: invert(38%) sepia(89%) saturate(500%) hue-rotate(180deg);
 }
