@@ -10,6 +10,9 @@ import MyBooking from "./pages/MyBooking";
 import NotFound from "./pages/NotFound";
 import HotelReg from "./components/HotelReg";
 import Layout from "./pages/hotel-owner/Layout";
+import Dashboard from "./pages/hotel-owner/Dashboard";
+import AddRoom from "./pages/hotel-owner/AddRoom";
+import ListRoom from "./pages/hotel-owner/ListRoom";
 
 const App = () => {
   const { openSignIn } = useClerk();
@@ -29,7 +32,11 @@ const App = () => {
             path="/my-bookings"
             element={user ? <MyBooking /> : <NotFound />}
           />
-          <Route path="/owner" element={<Layout />}></Route>
+          <Route path="/owner" element={<Layout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="add-room" element={<AddRoom />} />
+            <Route path="list-room" element={<ListRoom />} />
+          </Route>
         </Routes>
       </div>
       <Footer />
