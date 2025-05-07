@@ -46,6 +46,8 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+      {/* ---------Recent Booking ----------- */}
+      <h2 className="text-xl text-blue-950/70 font-medium mb-5">Recent Booking</h2>
     </div>
   );
 };
